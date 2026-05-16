@@ -32,23 +32,17 @@
       --color-surface:     #ffffff;
       --color-surface-alt: #ffffff;
       --color-border:      rgba(203, 203, 203, 0.14);
-
       --color-accent:      #d36e2a;
       --color-accent-dark: #7a3f12;
       --color-accent-light:#f0904a;
-
       --color-accent-2:    #427394;
       --color-accent-2-dark: #254657;
       --color-accent-2-light: #6ba3be;
-
       --color-white:       #ffffff;
       --color-white-soft:  #e8e0d5;
-
       --color-text:        #d36e2a;
       --color-text-muted:  #7a8fa0;
-
       --grad-hero: linear-gradient(135deg, #ffffff 0%, #f0ebe4 50%, #ffffff 100%);
-
       --tag-game-bg:       rgba(211,110,42,0.12);
       --tag-game-color:    #ffffff;
       --tag-web-bg:        rgba(66,115,148,0.15);
@@ -63,14 +57,12 @@
       font-family: 'Space Grotesk', sans-serif;
       overflow-x: hidden;
     }
-
     .bg-grid {
       background-image:
-        linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+        linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px);
       background-size: 40px 40px;
     }
-
     .glow-orb {
       border-radius: 50%;
       filter: blur(120px);
@@ -92,358 +84,82 @@
       border-bottom: 1px solid var(--color-border);
       transition: box-shadow 0.3s;
     }
-    .logo-text {
-      font-family: 'Syne', sans-serif;
-      font-weight: 800;
-      font-size: 1.4rem;
-      letter-spacing: -0.02em;
-      color: var(--color-text);
-    }
+    .logo-text { font-family: 'Syne', sans-serif; font-weight: 800; font-size: 1.4rem; letter-spacing: -0.02em; color: var(--color-text); }
     .logo-text span { color: var(--color-accent); }
-    .nav-links a {
-      color: var(--color-text-muted);
-      text-decoration: none;
-      font-size: 0.85rem;
-      font-weight: 500;
-      letter-spacing: 0.05em;
-      text-transform: uppercase;
-      transition: color 0.2s;
-      margin-left: 2rem;
-    }
+    .nav-links a { color: var(--color-text-muted); text-decoration: none; font-size: 0.85rem; font-weight: 500; letter-spacing: 0.05em; text-transform: uppercase; transition: color 0.2s; margin-left: 2rem; }
     .nav-links a:hover { color: var(--color-accent); }
 
     /* ── HERO ── */
-    .hero {
-      position: relative;
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: var(--grad-hero);
-      overflow: hidden;
-      padding: 7rem 1.5rem 4rem;
-    }
-    .hero-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      background: rgba(211,110,42,0.10);
-      border: 1px solid rgba(211,110,42,0.30);
-      border-radius: 100px;
-      padding: 0.35rem 1rem;
-      font-size: 0.78rem;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: var(--color-accent);
-      margin-bottom: 1.5rem;
-      font-weight: 600;
-    }
-    .hero-title {
-      font-family: 'Syne', sans-serif;
-      font-size: clamp(2.8rem, 6vw, 5.5rem);
-      font-weight: 800;
-      line-height: 1.05;
-      letter-spacing: -0.03em;
-      color: var(--color-text);
-    }
-    .hero-title .highlight {
-      color: transparent;
-      -webkit-background-clip: text;
-      background-clip: text;
-      background-image: linear-gradient(90deg, var(--color-accent), var(--color-accent-2));
-    }
-    .hero-subtitle {
-      font-size: 1.15rem;
-      color: var(--color-text-muted);
-      max-width: 600px;
-      line-height: 1.7;
-      margin-top: 1.2rem;
-    }
-    .hero-cta {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.6rem;
-      margin-top: 2.5rem;
-      padding: 0.85rem 2rem;
-      background: var(--color-accent);
-      color: var(--color-white);
-      font-weight: 700;
-      font-size: 0.9rem;
-      letter-spacing: 0.04em;
-      border-radius: 8px;
-      text-decoration: none;
-      transition: transform 0.2s, box-shadow 0.2s, background 0.2s;
-      box-shadow: 0 0 30px rgba(211,110,42,0.30);
-    }
-    .hero-cta:hover {
-      background: var(--color-accent-dark);
-      transform: translateY(-2px);
-      box-shadow: 0 0 45px rgba(211,110,42,0.48);
-    }
-    .hero-stats {
-      display: flex;
-      gap: 3rem;
-      margin-top: 4rem;
-      padding-top: 2rem;
-      border-top: 1px solid var(--color-border);
-    }
-    .stat-number {
-      font-family: 'Syne', sans-serif;
-      font-size: 2rem;
-      font-weight: 800;
-      color: var(--color-accent-2);
-    }
-    .stat-label {
-      font-size: 0.8rem;
-      color: var(--color-text-muted);
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-    }
+    .hero { position: relative; min-height: 100vh; display: flex; align-items: center; justify-content: center; background: var(--grad-hero); overflow: hidden; padding: 7rem 1.5rem 4rem; }
+    .hero-badge { display: inline-flex; align-items: center; gap: 0.5rem; background: rgba(211,110,42,0.10); border: 1px solid rgba(211,110,42,0.30); border-radius: 100px; padding: 0.35rem 1rem; font-size: 0.78rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--color-accent); margin-bottom: 1.5rem; font-weight: 600; }
+    .hero-title { font-family: 'Syne', sans-serif; font-size: clamp(2.8rem, 6vw, 5.5rem); font-weight: 800; line-height: 1.05; letter-spacing: -0.03em; color: var(--color-text); }
+    .hero-title .highlight { color: transparent; -webkit-background-clip: text; background-clip: text; background-image: linear-gradient(90deg, var(--color-accent), var(--color-accent-2)); }
+    .hero-subtitle { font-size: 1.15rem; color: var(--color-text-muted); max-width: 600px; line-height: 1.7; margin-top: 1.2rem; }
+    .hero-cta { display: inline-flex; align-items: center; gap: 0.6rem; margin-top: 2.5rem; padding: 0.85rem 2rem; background: var(--color-accent); color: var(--color-white); font-weight: 700; font-size: 0.9rem; letter-spacing: 0.04em; border-radius: 8px; text-decoration: none; transition: transform 0.2s, box-shadow 0.2s, background 0.2s; box-shadow: 0 0 30px rgba(211,110,42,0.30); }
+    .hero-cta:hover { background: var(--color-accent-dark); transform: translateY(-2px); box-shadow: 0 0 45px rgba(211,110,42,0.48); }
+    .hero-stats { display: flex; gap: 3rem; margin-top: 4rem; padding-top: 2rem; border-top: 1px solid var(--color-border); }
+    .stat-number { font-family: 'Syne', sans-serif; font-size: 2rem; font-weight: 800; color: var(--color-accent-2); }
+    .stat-label { font-size: 0.8rem; color: var(--color-text-muted); text-transform: uppercase; letter-spacing: 0.08em; }
 
     /* ── SECTION HEADER ── */
-    .section-tag {
-      display: inline-block;
-      font-size: 0.72rem;
-      font-weight: 600;
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
-      color: var(--color-accent-2);
-      margin-bottom: 0.75rem;
-    }
-    .section-title {
-      font-family: 'Syne', sans-serif;
-      font-size: clamp(1.8rem, 3vw, 2.8rem);
-      font-weight: 800;
-      letter-spacing: -0.02em;
-      color: var(--color-text);
-    }
+    .section-tag { display: inline-block; font-size: 0.72rem; font-weight: 600; letter-spacing: 0.15em; text-transform: uppercase; color: var(--color-accent-2); margin-bottom: 0.75rem; }
+    .section-title { font-family: 'Syne', sans-serif; font-size: clamp(1.8rem, 3vw, 2.8rem); font-weight: 800; letter-spacing: -0.02em; color: var(--color-text); }
 
     /* ── FILTER TABS ── */
-    .filter-btn {
-      padding: 0.5rem 1.25rem;
-      border-radius: 100px;
-      border: 1px solid var(--color-border);
-      background: transparent;
-      color: var(--color-text-muted);
-      font-size: 0.82rem;
-      font-weight: 600;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-      cursor: pointer;
-      transition: all 0.2s;
-      font-family: 'Space Grotesk', sans-serif;
-    }
-    .filter-btn:hover,
-    .filter-btn.active {
-      background: var(--color-accent);
-      border-color: var(--color-accent);
-      color: var(--color-white);
-    }
+    .filter-btn { padding: 0.5rem 1.25rem; border-radius: 100px; border: 1px solid var(--color-border); background: transparent; color: var(--color-text-muted); font-size: 0.82rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; cursor: pointer; transition: all 0.2s; font-family: 'Space Grotesk', sans-serif; }
+    .filter-btn:hover, .filter-btn.active { background: var(--color-accent); border-color: var(--color-accent); color: var(--color-white); }
 
     /* ── PROJECT CARDS ── */
-    .card {
-      background: var(--color-surface);
-      border: 1px solid var(--color-border);
-      border-radius: 16px;
-      overflow: hidden;
-      cursor: pointer;
-      text-decoration: none;
-      display: block;
-      transition: transform 0.3s cubic-bezier(.22,.68,0,1.2), box-shadow 0.3s, border-color 0.3s;
-      position: relative;
-    }
-    .card:hover {
-      transform: translateY(-6px);
-      border-color: rgba(66,115,148,0.40);
-      box-shadow: 0 20px 60px rgba(0,0,0,0.55), 0 0 0 1px rgba(66,115,148,0.12);
-    }
-    .card-thumb {
-      position: relative;
-      aspect-ratio: 16/9;
-      overflow: hidden;
-      background: var(--color-surface-alt);
-    }
-    .card-thumb img {
-      width: 100%; height: 100%;
-      object-fit: cover;
-      transition: transform 0.5s cubic-bezier(.22,.68,0,1.2);
-    }
+    .card { background: var(--color-surface); border: 1px solid var(--color-border); border-radius: 16px; overflow: hidden; cursor: pointer; text-decoration: none; display: block; transition: transform 0.3s cubic-bezier(.22,.68,0,1.2), box-shadow 0.3s, border-color 0.3s; position: relative; }
+    .card:hover { transform: translateY(-6px); border-color: rgba(66,115,148,0.40); box-shadow: 0 20px 60px rgba(0,0,0,0.55), 0 0 0 1px rgba(66,115,148,0.12); }
+    .card-thumb { position: relative; aspect-ratio: 16/9; overflow: hidden; background: var(--color-surface-alt); }
+    .card-thumb img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s cubic-bezier(.22,.68,0,1.2); }
     .card:hover .card-thumb img { transform: scale(1.06); }
-    .card-thumb-overlay {
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(to top, rgba(5,10,15,0.65) 0%, transparent 60%);
-      opacity: 0;
-      transition: opacity 0.3s;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
+    .card-thumb-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(5,10,15,0.65) 0%, transparent 60%); opacity: 0; transition: opacity 0.3s; display: flex; align-items: center; justify-content: center; }
     .card:hover .card-thumb-overlay { opacity: 1; }
-    .card-play-btn {
-      width: 52px; height: 52px;
-      border-radius: 50%;
-      background: var(--color-accent);
-      display: flex; align-items: center; justify-content: center;
-      transform: scale(0.7);
-      transition: transform 0.3s cubic-bezier(.22,.68,0,1.2);
-    }
+    .card-play-btn { width: 52px; height: 52px; border-radius: 50%; background: var(--color-accent); display: flex; align-items: center; justify-content: center; transform: scale(0.7); transition: transform 0.3s cubic-bezier(.22,.68,0,1.2); }
     .card:hover .card-play-btn { transform: scale(1); }
     .card-body { padding: 1.25rem 1.4rem 1.5rem; }
-    .card-tag {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.3rem;
-      font-size: 0.7rem;
-      font-weight: 700;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      border-radius: 100px;
-      padding: 0.25rem 0.75rem;
-      margin-bottom: 0.75rem;
-    }
-    .tag-game {
-      background: var(--tag-game-bg);
-      color: var(--tag-game-color);
-      border: 1px solid rgba(211,110,42,0.28);
-    }
-    .tag-web {
-      background: var(--tag-web-bg);
-      color: var(--tag-web-color);
-      border: 1px solid rgba(66,115,148,0.30);
-    }
-    .card-title {
-      font-family: 'Syne', sans-serif;
-      font-size: 1.15rem;
-      font-weight: 700;
-      color: var(--color-text);
-      line-height: 1.3;
-      margin-bottom: 0.4rem;
-    }
-    .card-student {
-      font-size: 0.82rem;
-      color: var(--color-text-muted);
-      display: flex;
-      align-items: center;
-      gap: 0.4rem;
-    }
-    .card-student::before {
-      content: '';
-      display: inline-block;
-      width: 16px; height: 2px;
-      background: var(--color-accent-2);
-      border-radius: 2px;
-    }
+    .card-tag { display: inline-flex; align-items: center; gap: 0.3rem; font-size: 0.7rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; border-radius: 100px; padding: 0.25rem 0.75rem; margin-bottom: 0.75rem; }
+    .tag-game { background: var(--tag-game-bg); color: var(--tag-game-color); border: 1px solid rgba(211,110,42,0.28); }
+    .tag-web { background: var(--tag-web-bg); color: var(--tag-web-color); border: 1px solid rgba(66,115,148,0.30); }
+    .card-title { font-family: 'Syne', sans-serif; font-size: 1.15rem; font-weight: 700; color: var(--color-text); line-height: 1.3; margin-bottom: 0.4rem; }
+    .card-student { font-size: 0.82rem; color: var(--color-text-muted); display: flex; align-items: center; gap: 0.4rem; }
+    .card-student::before { content: ''; display: inline-block; width: 16px; height: 2px; background: var(--color-accent-2); border-radius: 2px; }
 
     /* ── ABOUT STRIP ── */
-    .about-strip {
-      background: var(--color-surface);
-      border-top: 1px solid var(--color-border);
-      border-bottom: 1px solid var(--color-border);
-    }
+    .about-strip { background: var(--color-surface); border-top: 1px solid var(--color-border); border-bottom: 1px solid var(--color-border); }
 
     /* ── FOOTER ── */
-    .footer {
-      background: var(--color-surface);
-      border-top: 1px solid var(--color-border);
-      padding: 3.5rem 1.5rem 2rem;
-    }
-    .footer-logo {
-      font-family: 'Syne', sans-serif;
-      font-size: 1.6rem;
-      font-weight: 800;
-      color: var(--color-text);
-    }
+    .footer { background: var(--color-surface); border-top: 1px solid var(--color-border); padding: 3.5rem 1.5rem 2rem; }
+    .footer-logo { font-family: 'Syne', sans-serif; font-size: 1.6rem; font-weight: 800; color: var(--color-text); }
     .footer-logo span { color: var(--color-accent); }
-    .social-link {
-      width: 38px; height: 38px;
-      border-radius: 8px;
-      border: 1px solid var(--color-border);
-      background: transparent;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      color: var(--color-text-muted);
-      text-decoration: none;
-      font-size: 0.9rem;
-      transition: all 0.2s;
-    }
-    .social-link:hover {
-      background: var(--color-accent-2);
-      border-color: var(--color-accent-2);
-      color: var(--color-white);
-    }
+    .social-link { width: 38px; height: 38px; border-radius: 8px; border: 1px solid var(--color-border); background: transparent; display: inline-flex; align-items: center; justify-content: center; color: var(--color-text-muted); text-decoration: none; font-size: 0.9rem; transition: all 0.2s; }
+    .social-link:hover { background: var(--color-accent-2); border-color: var(--color-accent-2); color: var(--color-white); }
 
     /* ── ANIMATIONS ── */
-    @keyframes fadeUp {
-      from { opacity: 0; transform: translateY(24px); }
-      to   { opacity: 1; transform: translateY(0); }
-    }
+    @keyframes fadeUp { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: translateY(0); } }
     .animate-fade-up { animation: fadeUp 0.7s ease both; }
     .delay-1 { animation-delay: 0.1s; }
     .delay-2 { animation-delay: 0.2s; }
     .delay-3 { animation-delay: 0.35s; }
     .delay-4 { animation-delay: 0.5s; }
-    .delay-5 { animation-delay: 0.65s; }
-
     .reveal { opacity: 0; transform: translateY(20px); transition: opacity 0.6s ease, transform 0.6s ease; }
     .reveal.visible { opacity: 1; transform: none; }
 
     /* ── DETAIL PAGE ── */
-    #detail-page {
-      display: none;
-      position: fixed;
-      inset: 0;
-      background: var(--color-bg);
-      z-index: 200;
-      overflow-y: auto;
-    }
+    #detail-page { display: none; position: fixed; inset: 0; background: var(--color-bg); z-index: 200; overflow-y: auto; }
     #detail-page.open { display: block; }
-    .detail-student-photo {
-      width: 96px; height: 96px;
-      border-radius: 50%;
-      object-fit: cover;
-      border: 3px solid var(--color-accent);
-    }
-    .tech-pill {
-      display: inline-block;
-      padding: 0.3rem 0.9rem;
-      border-radius: 100px;
-      background: rgba(0,210,255,0.1);
-      border: 1px solid rgba(0,210,255,0.2);
-      color: var(--color-accent);
-      font-size: 0.78rem;
-      font-weight: 600;
-    }
-    .back-btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      color: var(--color-text-muted);
-      font-size: 0.85rem;
-      cursor: pointer;
-      background: none;
-      border: none;
-      font-family: 'Space Grotesk', sans-serif;
-      padding: 0.5rem 0;
-      transition: color 0.2s;
-    }
+    .detail-student-photo { width: 96px; height: 96px; border-radius: 50%; object-fit: cover; border: 3px solid var(--color-accent); }
+    .tech-pill { display: inline-block; padding: 0.3rem 0.9rem; border-radius: 100px; background: rgba(0,210,255,0.1); border: 1px solid rgba(0,210,255,0.2); color: var(--color-accent); font-size: 0.78rem; font-weight: 600; }
+    .back-btn { display: inline-flex; align-items: center; gap: 0.5rem; color: var(--color-text-muted); font-size: 0.85rem; cursor: pointer; background: none; border: none; font-family: 'Space Grotesk', sans-serif; padding: 0.5rem 0; transition: color 0.2s; }
     .back-btn:hover { color: var(--color-accent); }
     .scrollbar-hide { scrollbar-width: none; }
     .scrollbar-hide::-webkit-scrollbar { display: none; }
 
     /* ── PLACEHOLDER (cards em branco) ── */
-    .card-thumb-placeholder {
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(135deg, #f5f0eb 0%, #e8ddd2 100%);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    .card-thumb-placeholder svg {
-      opacity: 0.25;
-    }
+    .card-thumb-placeholder { width: 100%; height: 100%; background: linear-gradient(135deg, #f5f0eb 0%, #e8ddd2 100%); display: flex; align-items: center; justify-content: center; }
+    .card-thumb-placeholder svg { opacity: 0.25; }
 
     @media (max-width: 640px) {
       .hero-stats { gap: 1.5rem; }
@@ -475,7 +191,6 @@
     <section class="hero" id="hero">
       <div class="glow-orb" style="width:500px;height:500px;background:rgba(0,210,255,0.07);top:-100px;left:-150px;"></div>
       <div class="glow-orb" style="width:400px;height:400px;background:rgba(123,94,167,0.08);bottom:-80px;right:-100px;"></div>
-
       <div class="text-center relative z-10 max-w-4xl mx-auto">
         <div class="hero-badge animate-fade-up">
           <svg width="8" height="8" viewBox="0 0 8 8" fill="none"><circle cx="4" cy="4" r="4" fill="#00d2ff"/></svg>
@@ -495,18 +210,9 @@
           <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8H13M13 8L8.5 3.5M13 8L8.5 12.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </a>
         <div class="hero-stats justify-center animate-fade-up delay-4">
-          <div>
-            <div class="stat-number">18+</div>
-            <div class="stat-label">Projetos</div>
-          </div>
-          <div>
-            <div class="stat-number">120+</div>
-            <div class="stat-label">Alunos</div>
-          </div>
-          <div>
-            <div class="stat-number">6</div>
-            <div class="stat-label">Turmas</div>
-          </div>
+          <div><div class="stat-number">18+</div><div class="stat-label">Projetos</div></div>
+          <div><div class="stat-number">120+</div><div class="stat-label">Alunos</div></div>
+          <div><div class="stat-number">6</div><div class="stat-label">Turmas</div></div>
         </div>
       </div>
     </section>
@@ -529,26 +235,17 @@
       </div>
 
       <!-- ============================================================
-        GRID DE CARDS — 8 cards no total
-        Para adicionar mais cards: copie um bloco de card e ajuste o
-        data-category ("game" ou "web") e o onclick com o índice correto
-        do array `projects` no JavaScript abaixo.
+        GRID DE CARDS — 9 cards no total
+        Para adicionar mais cards: copie um bloco e ajuste o
+        data-category ("game" ou "web") e o openDetail(índice).
       ============================================================ -->
       <div id="cards-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
 
-        <!-- ══════════════════════════════════════════════════════
-          CARD 1 — Fuga da Galinha
-          Aluno: Kevyn Sulivan de Jesus Pereira
-          Índice no array projects: 0
-        ══════════════════════════════════════════════════════ -->
+        <!-- ══ CARD 1 — Fuga da Galinha | índice: 0 ══ -->
         <a href="#" class="card reveal" data-category="game" onclick="openDetail(0); return false;">
           <div class="card-thumb">
             <img src="fugagalinha.png" alt="Fuga das Galinhas" loading="lazy" />
-            <div class="card-thumb-overlay">
-              <div class="card-play-btn">
-                <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M6 4L16 10L6 16V4Z" fill="#050a0f"/></svg>
-              </div>
-            </div>
+            <div class="card-thumb-overlay"><div class="card-play-btn"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M6 4L16 10L6 16V4Z" fill="#050a0f"/></svg></div></div>
           </div>
           <div class="card-body">
             <span class="card-tag tag-game">🎮 Jogo</span>
@@ -557,20 +254,11 @@
           </div>
         </a>
 
-        <!-- ══════════════════════════════════════════════════════
-          CARD 2 — Cart Race
-          Aluno: Victor Fenelon
-          Índice no array projects: 1
-          Imagem: cartrace.png (arquivo local)
-        ══════════════════════════════════════════════════════ -->
+        <!-- ══ CARD 2 — Cart Race | índice: 1 | imagem: cartrace.png ══ -->
         <a href="#" class="card reveal" data-category="game" onclick="openDetail(1); return false;">
           <div class="card-thumb">
             <img src="cartrace.png" alt="Cart Race" loading="lazy" />
-            <div class="card-thumb-overlay">
-              <div class="card-play-btn">
-                <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M6 4L16 10L6 16V4Z" fill="#050a0f"/></svg>
-              </div>
-            </div>
+            <div class="card-thumb-overlay"><div class="card-play-btn"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M6 4L16 10L6 16V4Z" fill="#050a0f"/></svg></div></div>
           </div>
           <div class="card-body">
             <span class="card-tag tag-game">🎮 Jogo</span>
@@ -579,20 +267,11 @@
           </div>
         </a>
 
-        <!-- ══════════════════════════════════════════════════════
-          CARD 3 — FG Finance
-          Alunos: Alisson e Adrian
-          Índice no array projects: 2
-          Imagem: fgfinance.png (arquivo local)
-        ══════════════════════════════════════════════════════ -->
+        <!-- ══ CARD 3 — FG Finance | índice: 2 | imagem: fgfinance.webp ══ -->
         <a href="#" class="card reveal" data-category="web" onclick="openDetail(2); return false;">
           <div class="card-thumb">
             <img src="fgfinance.webp" alt="FG Finance" loading="lazy" />
-            <div class="card-thumb-overlay">
-              <div class="card-play-btn">
-                <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M6 4L16 10L6 16V4Z" fill="#050a0f"/></svg>
-              </div>
-            </div>
+            <div class="card-thumb-overlay"><div class="card-play-btn"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M6 4L16 10L6 16V4Z" fill="#050a0f"/></svg></div></div>
           </div>
           <div class="card-body">
             <span class="card-tag tag-web">🌐 Web</span>
@@ -601,20 +280,11 @@
           </div>
         </a>
 
-        <!-- ══════════════════════════════════════════════════════
-          CARD 4 — Craft Bank
-          Alunos: Vinicius, Jorge, Nicolas, Theo e Francisco
-          Índice no array projects: 3
-          Imagem: craftbank.png (arquivo local)
-        ══════════════════════════════════════════════════════ -->
+        <!-- ══ CARD 4 — Craft Bank | índice: 3 | imagem: craftbank.webp ══ -->
         <a href="#" class="card reveal" data-category="game" onclick="openDetail(3); return false;">
           <div class="card-thumb">
             <img src="craftbank.webp" alt="Craft Bank" loading="lazy" />
-            <div class="card-thumb-overlay">
-              <div class="card-play-btn">
-                <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M6 4L16 10L6 16V4Z" fill="#050a0f"/></svg>
-              </div>
-            </div>
+            <div class="card-thumb-overlay"><div class="card-play-btn"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M6 4L16 10L6 16V4Z" fill="#050a0f"/></svg></div></div>
           </div>
           <div class="card-body">
             <span class="card-tag tag-game">🎮 Jogo</span>
@@ -623,20 +293,11 @@
           </div>
         </a>
 
-        <!-- ══════════════════════════════════════════════════════
-          CARD 5 — BLCK Store
-          Aluno: Ruan Araujo
-          Índice no array projects: 4
-          Imagem: blckstore.png (arquivo local)
-        ══════════════════════════════════════════════════════ -->
+        <!-- ══ CARD 5 — BLCK Store | índice: 4 | imagem: blckstore.jpg ══ -->
         <a href="#" class="card reveal" data-category="web" onclick="openDetail(4); return false;">
           <div class="card-thumb">
             <img src="blckstore.jpg" alt="BLCK Store" loading="lazy" />
-            <div class="card-thumb-overlay">
-              <div class="card-play-btn">
-                <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M6 4L16 10L6 16V4Z" fill="#050a0f"/></svg>
-              </div>
-            </div>
+            <div class="card-thumb-overlay"><div class="card-play-btn"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M6 4L16 10L6 16V4Z" fill="#050a0f"/></svg></div></div>
           </div>
           <div class="card-body">
             <span class="card-tag tag-web">🌐 Web</span>
@@ -645,20 +306,11 @@
           </div>
         </a>
 
-        <!-- ══════════════════════════════════════════════════════
-          CARD 6 — Local Steam
-          Aluno: Davi Andrade
-          Índice no array projects: 5
-          Imagem: localsteam.png (arquivo local)
-        ══════════════════════════════════════════════════════ -->
+        <!-- ══ CARD 6 — Local Steam | índice: 5 | imagem: localsteam.png ══ -->
         <a href="#" class="card reveal" data-category="web" onclick="openDetail(5); return false;">
           <div class="card-thumb">
             <img src="localsteam.png" alt="Local Steam" loading="lazy" />
-            <div class="card-thumb-overlay">
-              <div class="card-play-btn">
-                <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M6 4L16 10L6 16V4Z" fill="#050a0f"/></svg>
-              </div>
-            </div>
+            <div class="card-thumb-overlay"><div class="card-play-btn"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M6 4L16 10L6 16V4Z" fill="#050a0f"/></svg></div></div>
           </div>
           <div class="card-body">
             <span class="card-tag tag-web">🌐 Web</span>
@@ -667,99 +319,51 @@
           </div>
         </a>
 
-        <!-- ══════════════════════════════════════════════════════
-          CARD 7 — EM BRANCO (a preencher)
-          Para preencher: substitua o src da imagem, o card-title,
-          o card-student, o data-category e o openDetail(índice).
-          Lembre de adicionar o projeto correspondente no array
-          `projects` no JavaScript abaixo (índice 6).
-        ══════════════════════════════════════════════════════ -->
+        <!-- ══ CARD 7 — EM BRANCO | índice: 6
+             SUBSTITUIR: data-category, openDetail(6), imagem, tag, título, aluno ══ -->
         <a href="#" class="card reveal" data-category="game" onclick="openDetail(6); return false;">
           <div class="card-thumb">
-            <!-- SUBSTITUIR: adicionar imagem do projeto aqui -->
-            <div class="card-thumb-placeholder">
-              <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <rect x="4" y="4" width="40" height="40" rx="8" stroke="#d36e2a" stroke-width="2" stroke-dasharray="6 4"/>
-                <path d="M24 16V32M16 24H32" stroke="#d36e2a" stroke-width="2" stroke-linecap="round"/>
-              </svg>
+            <div class="card-thumb-placeholder"><!-- SUBSTITUIR: <img src="foto.png" ...> -->
+              <svg width="48" height="48" viewBox="0 0 48 48" fill="none"><rect x="4" y="4" width="40" height="40" rx="8" stroke="#d36e2a" stroke-width="2" stroke-dasharray="6 4"/><path d="M24 16V32M16 24H32" stroke="#d36e2a" stroke-width="2" stroke-linecap="round"/></svg>
             </div>
-            <div class="card-thumb-overlay">
-              <div class="card-play-btn">
-                <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M6 4L16 10L6 16V4Z" fill="#050a0f"/></svg>
-              </div>
-            </div>
+            <div class="card-thumb-overlay"><div class="card-play-btn"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M6 4L16 10L6 16V4Z" fill="#050a0f"/></svg></div></div>
           </div>
           <div class="card-body">
-            <!-- SUBSTITUIR: trocar tag-game por tag-web se for site -->
-            <span class="card-tag tag-game">🎮 Jogo</span>
-            <!-- SUBSTITUIR: título do projeto -->
-            <div class="card-title">Lorem ipsum dolor sit</div>
-            <!-- SUBSTITUIR: nome do(s) aluno(s) -->
-            <div class="card-student">Lorem ipsum · 00 anos</div>
+            <span class="card-tag tag-game">🎮 Jogo</span><!-- SUBSTITUIR tag se necessário -->
+            <div class="card-title">Lorem ipsum dolor sit</div><!-- SUBSTITUIR -->
+            <div class="card-student">Lorem ipsum · 00 anos</div><!-- SUBSTITUIR -->
           </div>
         </a>
 
-        <!-- ══════════════════════════════════════════════════════
-          CARD 8 — EM BRANCO (a preencher)
-          Para preencher: substitua o src da imagem, o card-title,
-          o card-student, o data-category e o openDetail(índice).
-          Lembre de adicionar o projeto correspondente no array
-          `projects` no JavaScript abaixo (índice 7).
-        ══════════════════════════════════════════════════════ -->
+        <!-- ══ CARD 8 — EM BRANCO | índice: 7
+             SUBSTITUIR: data-category, openDetail(7), imagem, tag, título, aluno ══ -->
         <a href="#" class="card reveal" data-category="web" onclick="openDetail(7); return false;">
           <div class="card-thumb">
-            <!-- SUBSTITUIR: adicionar imagem do projeto aqui -->
-            <div class="card-thumb-placeholder">
-              <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <rect x="4" y="4" width="40" height="40" rx="8" stroke="#427394" stroke-width="2" stroke-dasharray="6 4"/>
-                <path d="M24 16V32M16 24H32" stroke="#427394" stroke-width="2" stroke-linecap="round"/>
-              </svg>
+            <div class="card-thumb-placeholder"><!-- SUBSTITUIR: <img src="foto.png" ...> -->
+              <svg width="48" height="48" viewBox="0 0 48 48" fill="none"><rect x="4" y="4" width="40" height="40" rx="8" stroke="#427394" stroke-width="2" stroke-dasharray="6 4"/><path d="M24 16V32M16 24H32" stroke="#427394" stroke-width="2" stroke-linecap="round"/></svg>
             </div>
-            <div class="card-thumb-overlay">
-              <div class="card-play-btn">
-                <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M6 4L16 10L6 16V4Z" fill="#050a0f"/></svg>
-              </div>
-            </div>
+            <div class="card-thumb-overlay"><div class="card-play-btn"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M6 4L16 10L6 16V4Z" fill="#050a0f"/></svg></div></div>
           </div>
           <div class="card-body">
-            <!-- SUBSTITUIR: trocar tag-web por tag-game se for jogo -->
-            <span class="card-tag tag-web">🌐 Web</span>
-            <!-- SUBSTITUIR: título do projeto -->
-            <div class="card-title">Lorem ipsum dolor sit</div>
-            <!-- SUBSTITUIR: nome do(s) aluno(s) -->
-            <div class="card-student">Lorem ipsum · 00 anos</div>
+            <span class="card-tag tag-web">🌐 Web</span><!-- SUBSTITUIR tag se necessário -->
+            <div class="card-title">Lorem ipsum dolor sit</div><!-- SUBSTITUIR -->
+            <div class="card-student">Lorem ipsum · 00 anos</div><!-- SUBSTITUIR -->
           </div>
         </a>
 
-        <!-- ══════════════════════════════════════════════════════
-          CARD 9 — EM BRANCO (a preencher)
-          Para preencher: substitua o src da imagem, o card-title,
-          o card-student, o data-category e o openDetail(índice).
-          Lembre de adicionar o projeto correspondente no array
-          `projects` no JavaScript abaixo (índice 8).
-        ══════════════════════════════════════════════════════ -->
+        <!-- ══ CARD 9 — EM BRANCO | índice: 8
+             SUBSTITUIR: data-category, openDetail(8), imagem, tag, título, aluno ══ -->
         <a href="#" class="card reveal" data-category="game" onclick="openDetail(8); return false;">
           <div class="card-thumb">
-            <!-- SUBSTITUIR: adicionar imagem do projeto aqui -->
-            <div class="card-thumb-placeholder">
-              <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <rect x="4" y="4" width="40" height="40" rx="8" stroke="#d36e2a" stroke-width="2" stroke-dasharray="6 4"/>
-                <path d="M24 16V32M16 24H32" stroke="#d36e2a" stroke-width="2" stroke-linecap="round"/>
-              </svg>
+            <div class="card-thumb-placeholder"><!-- SUBSTITUIR: <img src="foto.png" ...> -->
+              <svg width="48" height="48" viewBox="0 0 48 48" fill="none"><rect x="4" y="4" width="40" height="40" rx="8" stroke="#d36e2a" stroke-width="2" stroke-dasharray="6 4"/><path d="M24 16V32M16 24H32" stroke="#d36e2a" stroke-width="2" stroke-linecap="round"/></svg>
             </div>
-            <div class="card-thumb-overlay">
-              <div class="card-play-btn">
-                <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M6 4L16 10L6 16V4Z" fill="#050a0f"/></svg>
-              </div>
-            </div>
+            <div class="card-thumb-overlay"><div class="card-play-btn"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M6 4L16 10L6 16V4Z" fill="#050a0f"/></svg></div></div>
           </div>
           <div class="card-body">
-            <!-- SUBSTITUIR: trocar tag-game por tag-web se for site -->
-            <span class="card-tag tag-game">🎮 Jogo</span>
-            <!-- SUBSTITUIR: título do projeto -->
-            <div class="card-title">Lorem ipsum dolor sit</div>
-            <!-- SUBSTITUIR: nome do(s) aluno(s) -->
-            <div class="card-student">Lorem ipsum · 00 anos</div>
+            <span class="card-tag tag-game">🎮 Jogo</span><!-- SUBSTITUIR tag se necessário -->
+            <div class="card-title">Lorem ipsum dolor sit</div><!-- SUBSTITUIR -->
+            <div class="card-student">Lorem ipsum · 00 anos</div><!-- SUBSTITUIR -->
           </div>
         </a>
 
@@ -781,25 +385,14 @@
             desenvolvedores, designers e criadores que o mundo digital precisa.
           </p>
           <div class="flex gap-6 mt-8">
-            <div>
-              <div class="stat-number" style="font-size:1.6rem;">5+</div>
-              <div class="stat-label" style="font-size:0.75rem;">Anos de experiência</div>
-            </div>
-            <div>
-              <div class="stat-number" style="font-size:1.6rem;">98%</div>
-              <div class="stat-label" style="font-size:0.75rem;">Satisfação familiar</div>
-            </div>
-            <div>
-              <div class="stat-number" style="font-size:1.6rem;">40+</div>
-              <div class="stat-label" style="font-size:0.75rem;">Parceiros</div>
-            </div>
+            <div><div class="stat-number" style="font-size:1.6rem;">5+</div><div class="stat-label" style="font-size:0.75rem;">Anos de experiência</div></div>
+            <div><div class="stat-number" style="font-size:1.6rem;">98%</div><div class="stat-label" style="font-size:0.75rem;">Satisfação familiar</div></div>
+            <div><div class="stat-number" style="font-size:1.6rem;">40+</div><div class="stat-label" style="font-size:0.75rem;">Parceiros</div></div>
           </div>
         </div>
         <div class="reveal relative">
           <div class="rounded-2xl overflow-hidden border" style="border-color:var(--color-border);">
-            <img src="https://images.unsplash.com/photo-1610484826967-09c5720778c7?w=700&q=80"
-                 alt="Alunos em aula"
-                 class="w-full object-cover" style="aspect-ratio:4/3;" />
+            <img src="https://images.unsplash.com/photo-1610484826967-09c5720778c7?w=700&q=80" alt="Alunos em aula" class="w-full object-cover" style="aspect-ratio:4/3;" />
           </div>
           <div class="absolute -bottom-4 -left-4 rounded-xl p-4" style="background:var(--color-bg);border:1px solid var(--color-border);">
             <div style="color:var(--color-accent);font-family:'Syne',sans-serif;font-weight:800;font-size:1.1rem;">+120</div>
@@ -826,9 +419,7 @@
         <div class="grid md:grid-cols-3 gap-10 pb-10 border-b" style="border-color:var(--color-border);">
           <div>
             <div class="footer-logo mb-3">CTRL<span>+</span>Play</div>
-            <p class="text-sm leading-relaxed" style="color:var(--color-text-muted);">
-              Escola de tecnologia criativa para jovens protagonistas do mundo digital.
-            </p>
+            <p class="text-sm leading-relaxed" style="color:var(--color-text-muted);">Escola de tecnologia criativa para jovens protagonistas do mundo digital.</p>
             <div class="flex gap-2 mt-5">
               <a href="https://instagram.com/ctrlplay" class="social-link" aria-label="Instagram">
                 <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
@@ -852,21 +443,18 @@
           <div>
             <h4 style="font-family:'Syne',sans-serif;font-weight:700;font-size:.95rem;margin-bottom:1rem;">Links úteis</h4>
             <ul class="space-y-2 text-sm" style="color:var(--color-text-muted);">
-              <li><a href="#" style="color:inherit;text-decoration:none;transition:color .2s;" onmouseover="this.style.color='var(--color-accent)'" onmouseout="this.style.color='var(--color-text-muted)'">Conheça os cursos</a></li>
-              <li><a href="#" style="color:inherit;text-decoration:none;transition:color .2s;" onmouseover="this.style.color='var(--color-accent)'" onmouseout="this.style.color='var(--color-text-muted)'">Para empresas parceiras</a></li>
-              <li><a href="#" style="color:inherit;text-decoration:none;transition:color .2s;" onmouseover="this.style.color='var(--color-accent)'" onmouseout="this.style.color='var(--color-text-muted)'">Para responsáveis</a></li>
-              <li><a href="#" style="color:inherit;text-decoration:none;transition:color .2s;" onmouseover="this.style.color='var(--color-accent)'" onmouseout="this.style.color='var(--color-text-muted)'">Política de privacidade</a></li>
+              <li><a href="#" style="color:inherit;text-decoration:none;" onmouseover="this.style.color='var(--color-accent)'" onmouseout="this.style.color='var(--color-text-muted)'">Conheça os cursos</a></li>
+              <li><a href="#" style="color:inherit;text-decoration:none;" onmouseover="this.style.color='var(--color-accent)'" onmouseout="this.style.color='var(--color-text-muted)'">Para empresas parceiras</a></li>
+              <li><a href="#" style="color:inherit;text-decoration:none;" onmouseover="this.style.color='var(--color-accent)'" onmouseout="this.style.color='var(--color-text-muted)'">Para responsáveis</a></li>
+              <li><a href="#" style="color:inherit;text-decoration:none;" onmouseover="this.style.color='var(--color-accent)'" onmouseout="this.style.color='var(--color-text-muted)'">Política de privacidade</a></li>
             </ul>
           </div>
         </div>
-        <p class="text-center text-xs pt-8" style="color:var(--color-text-muted);">
-          © 2026 CTRL+Play Escola de Tecnologia. Todos os direitos reservados.
-        </p>
+        <p class="text-center text-xs pt-8" style="color:var(--color-text-muted);">© 2026 CTRL+Play Escola de Tecnologia. Todos os direitos reservados.</p>
       </div>
     </footer>
 
   </main><!-- /landing-page -->
-
 
   <!-- ============================================================
     DETAIL PAGE — renderizada via JS quando um card é clicado
@@ -875,24 +463,26 @@
     <!-- conteúdo injetado dinamicamente pela função openDetail() -->
   </div>
 
-
   <!-- ============================================================
     JAVASCRIPT — DADOS E LÓGICA DOS PROJETOS
     ============================================================
 
-    COMO EDITAR:
+    COMO EDITAR OS DADOS:
     - Cada objeto no array `projects` corresponde a um card.
-    - A ordem dos objetos deve ser a mesma dos cards no HTML acima.
-    - Para cards em branco (índices 6 e 7), deixe os dados com
-      lorem ipsum até ter as informações reais.
-    - projectUrl: link para o projeto publicado (itch.io, github, etc.)
-    - coverImg: caminho relativo da imagem (ex: "nomefoto.png")
-    - techs: lista de tecnologias usadas (aparece como pills na página de detalhe)
+    - A ordem deve ser a mesma dos cards no HTML acima.
+    - coverImg: nome do arquivo de imagem na mesma pasta do index.html
+        Formatos aceitos: .png .jpg .jpeg .webp
+        Exemplo: coverImg: "cartrace.png"
+    - techs: lista de tecnologias (pills na página de detalhe)
+    - student.favorito: coisa favorita do aluno  ❤️
+    - student.detesta:  coisa que o aluno detesta 🙅
+    - student.photo: nome do arquivo de foto (ex: "kevynsulivan.jpg")
+        ou URL externa (ex: "https://...")
   ============================================================ -->
   <script>
     const projects = [
 
-      /* ── PROJETO 0 — Fuga da Galinha ─────────────────────────── */
+      /* ── PROJETO 0 — Fuga da Galinha ── */
       {
         id: 0,
         category: "game",
@@ -908,12 +498,33 @@
           age: 13,
           city: "Várzea Paulista, SP",
           photo: "kevynsulivan.jpg",
-          bio: "Biologia e pokémon",
-          quote: "\"Sempre quis criar um jogo que as pessoas sentissem vontade de jogar de novo. Acho que a Fuga da Galinha chegou perto disso!\""
+          favorito: "Biologia e pokémon",
+          detesta: "Lorem ipsum dolor sit amet consectetur." /* SUBSTITUIR */
         }
       },
 
-      /* ── PROJETO 1 — Cart Race ────────────────────────────────── */
+      /* ── PROJETO 1 — Cart Race ── */
+      {
+        id: 2,
+        category: "web",
+        title: "FG Finance",
+        projectUrl: "https://fgfinance.github.io/FGFinance/index.html",
+        coverImg: "fgfinance.webp",
+        description: "FG Finance é uma plataforma web de educação financeira que ajuda jovens a entenderem conceitos como orçamento, investimentos e controle de gastos. Com visual impactante e interface intuitiva, o projeto une design e conteúdo para tornar finanças acessíveis.",
+        challenge: "O principal desafio foi criar um layout que transmitisse credibilidade e seriedade — típicos do universo financeiro — sem perder a identidade jovem e dinâmica que o público-alvo espera. A dupla iterou bastante no design antes de chegar na versão final.",
+        learnings: "Alisson e Adrian aprofundaram seus conhecimentos em HTML semântico, CSS com animações e layout responsivo com Flexbox e Grid, além de aprender boas práticas de organização de código em JavaScript.",
+        techs: ["HTML5", "CSS3", "JavaScript"],
+        student: {
+          name: "Alisson e Adrian",
+          age: null,
+          city: "Várzea Paulista, SP",
+          photo: "https://images.unsplash.com/photo-1531427186611-ecfd6d936c79?w=200&q=80",
+          favorito: "Lorem ipsum dolor sit amet consectetur.", /* SUBSTITUIR */
+          detesta: "Lorem ipsum dolor sit amet consectetur."  /* SUBSTITUIR */
+        }
+      },
+
+      /* ── PROJETO 2 — FG Finance ── */
       {
         id: 1,
         category: "game",
@@ -929,60 +540,18 @@
           age: null,
           city: "Várzea Paulista, SP",
           photo: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=200&q=80",
-          bio: "Victor é apaixonado por jogos de corrida e quis trazer essa paixão para um projeto próprio. Na CTRL+Play, aprendeu a transformar suas ideias em experiências digitais jogáveis do zero.",
-          quote: "\"Criar o Cart Race me fez entender que fazer um jogo é muito mais do que parece — cada detalhe importa para quem está jogando.\""
+          favorito: "Lorem ipsum dolor sit amet consectetur.", /* SUBSTITUIR */
+          detesta: "Lorem ipsum dolor sit amet consectetur."  /* SUBSTITUIR */
         }
       },
 
-      /* ── PROJETO 2 — FG Finance ──────────────────────────────── */
-      {
-        id: 2,
-        category: "web",
-        title: "FG Finance",
-        projectUrl: "https://fgfinance.github.io/FGFinance/index.html",
-        coverImg: "fgfinance.png",
-        description: "FG Finance é uma plataforma web de educação financeira que ajuda jovens a entenderem conceitos como orçamento, investimentos e controle de gastos. Com visual impactante e interface intuitiva, o projeto une design e conteúdo para tornar finanças acessíveis.",
-        challenge: "O principal desafio foi criar um layout que transmitisse credibilidade e seriedade — típicos do universo financeiro — sem perder a identidade jovem e dinâmica que o público-alvo espera. A dupla itenerou bastante no design antes de chegar na versão final.",
-        learnings: "Alisson e Adrian aprofundaram seus conhecimentos em HTML semântico, CSS com animações e layout responsivo com Flexbox e Grid, além de aprender boas práticas de organização de código em JavaScript.",
-        techs: ["HTML5", "CSS3", "JavaScript"],
-        student: {
-          name: "Alisson e Adrian",
-          age: null,
-          city: "Várzea Paulista, SP",
-          photo: "https://images.unsplash.com/photo-1531427186611-ecfd6d936c79?w=200&q=80",
-          bio: "Alisson e Adrian formaram uma dupla dinâmica: um focado mais no design e o outro na lógica de programação. Juntos, combinaram suas habilidades para criar um site com visual profissional e funcional.",
-          quote: "\"Trabalhar em equipe nos ensinou que dois pontos de vista diferentes constroem algo muito melhor do que um só conseguiria.\""
-        }
-      },
-
-      /* ── PROJETO 3 — Craft Bank ──────────────────────────────── */
-      {
-        id: 3,
-        category: "game",
-        title: "Craft Bank",
-        projectUrl: "https://scratch.mit.edu/projects/1138533619/",
-        coverImg: "craftbank.png",
-        description: "Craft Bank é um jogo de aventura e estratégia desenvolvido no Scratch, inspirado no universo de construção de blocos. O jogador gerencia recursos, constrói estruturas e toma decisões financeiras dentro do jogo para expandir seu território.",
-        challenge: "Coordenar o desenvolvimento entre cinco pessoas no Scratch foi o maior desafio: dividir tarefas, integrar as partes sem quebrar o código dos colegas e manter a consistência visual do projeto exigiu muita comunicação e organização da equipe.",
-        learnings: "O grupo aprendeu lógica de programação visual com blocos, pensamento computacional e, principalmente, como trabalhar em equipe em um projeto de software — gerenciando versões e responsabilidades entre os integrantes.",
-        techs: ["Scratch", "Lógica de Programação", "Trabalho em Equipe"],
-        student: {
-          name: "Vinicius, Jorge, Nicolas, Theo e Francisco",
-          age: null,
-          city: "Várzea Paulista, SP",
-          photo: "https://images.unsplash.com/photo-1574154894072-16736a4e3a5b?w=200&q=80",
-          bio: "Uma equipe de cinco alunos que provou que colaboração é uma habilidade tão importante quanto programar. Cada um trouxe um talento diferente: criatividade, lógica, design, narrativa e organização.",
-          quote: "\"A melhor parte foi ver tudo se juntar no final. Cada um de nós colocou um pedaço de si nesse jogo.\""
-        }
-      },
-
-      /* ── PROJETO 4 — BLCK Store ──────────────────────────────── */
+      /* ── PROJETO 3 — Craft Bank ── */
       {
         id: 4,
         category: "web",
         title: "BLCK Store",
         projectUrl: "https://andrecostatentini.github.io/BLCK-Store/",
-        coverImg: "blckstore.png",
+        coverImg: "blckstore.jpg",
         description: "BLCK Store é uma loja virtual com identidade visual marcante, desenvolvida do zero com HTML, CSS e JavaScript. O projeto apresenta um catálogo de produtos com design minimalista em preto e branco, carrinho de compras e uma experiência de navegação fluida.",
         challenge: "Criar um carrinho de compras funcional apenas com JavaScript puro, sem bibliotecas externas, foi o maior desafio técnico. Ruan precisou estudar manipulação de arrays, persistência com localStorage e atualização dinâmica do DOM.",
         learnings: "Ruan dominou a criação de layouts responsivos com CSS Grid e Flexbox, manipulação avançada do DOM com JavaScript, e aprendeu a importância de uma identidade visual forte e consistente em projetos web.",
@@ -992,12 +561,33 @@
           age: null,
           city: "Várzea Paulista, SP",
           photo: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=200&q=80",
-          bio: "Ruan combina interesse em moda e tecnologia — e a BLCK Store é o resultado dessa união. Ele queria criar um projeto que parecesse um produto real, com atenção a cada detalhe visual e funcional.",
-          quote: "\"Queria que qualquer pessoa que abrisse o site pensasse que era uma loja de verdade. Esse foi meu objetivo desde o primeiro dia.\""
+          favorito: "Lorem ipsum dolor sit amet consectetur.", /* SUBSTITUIR */
+          detesta: "Lorem ipsum dolor sit amet consectetur."  /* SUBSTITUIR */
         }
       },
 
-      /* ── PROJETO 5 — Local Steam ─────────────────────────────── */
+      /* ── PROJETO 4 — BLCK Store ── */
+      {
+        id: 3,
+        category: "game",
+        title: "Craft Bank",
+        projectUrl: "https://scratch.mit.edu/projects/1138533619/",
+        coverImg: "craftbank.webp",
+        description: "Craft Bank é um jogo de aventura e estratégia desenvolvido no Scratch, inspirado no universo de construção de blocos. O jogador gerencia recursos, constrói estruturas e toma decisões financeiras dentro do jogo para expandir seu território.",
+        challenge: "Coordenar o desenvolvimento entre cinco pessoas no Scratch foi o maior desafio: dividir tarefas, integrar as partes sem quebrar o código dos colegas e manter a consistência visual do projeto exigiu muita comunicação e organização da equipe.",
+        learnings: "O grupo aprendeu lógica de programação visual com blocos, pensamento computacional e, principalmente, como trabalhar em equipe em um projeto de software — gerenciando versões e responsabilidades entre os integrantes.",
+        techs: ["Scratch", "Lógica de Programação", "Trabalho em Equipe"],
+        student: {
+          name: "Vinicius, Jorge, Nicolas, Theo e Francisco",
+          age: null,
+          city: "Várzea Paulista, SP",
+          photo: "https://images.unsplash.com/photo-1574154894072-16736a4e3a5b?w=200&q=80",
+          favorito: "Lorem ipsum dolor sit amet consectetur.", /* SUBSTITUIR */
+          detesta: "Lorem ipsum dolor sit amet consectetur."  /* SUBSTITUIR */
+        }
+      },
+
+      /* ── PROJETO 5 — Local Steam ── */
       {
         id: 5,
         category: "web",
@@ -1013,80 +603,80 @@
           age: null,
           city: "Várzea Paulista, SP",
           photo: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&q=80",
-          bio: "Davi é jogador e desenvolvedor — a combinação perfeita para criar a Local Steam. Ele usou sua familiaridade com a plataforma original para garantir que cada detalhe da recriação fosse fiel e funcional.",
-          quote: "\"Escolhi a Steam porque a uso todo dia. Pensei: se conheço tão bem, por que não tentar recriar? Foi muito mais difícil do que imaginei — e muito mais recompensador.\""
+          favorito: "Lorem ipsum dolor sit amet consectetur.", /* SUBSTITUIR */
+          detesta: "Lorem ipsum dolor sit amet consectetur."  /* SUBSTITUIR */
         }
       },
 
-      /* ── PROJETO 6 — EM BRANCO (a preencher) ────────────────────
-         Substitua todos os campos abaixo com as informações reais.
+      /* ── PROJETO 6 — EM BRANCO (a preencher) ──
+         Substitua todos os campos marcados com SUBSTITUIR.
          Mantenha a estrutura do objeto intacta.
-      ──────────────────────────────────────────────────────────── */
+      ── */
       {
         id: 6,
-        category: "game",                    /* SUBSTITUIR: "game" ou "web" */
-        title: "Lorem Ipsum Dolor Sit",       /* SUBSTITUIR: nome do projeto */
-        projectUrl: "#",                      /* SUBSTITUIR: URL do projeto */
-        coverImg: "",                         /* SUBSTITUIR: caminho da imagem */
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        category: "game",                     /* SUBSTITUIR: "game" ou "web" */
+        title: "Lorem Ipsum Dolor Sit",        /* SUBSTITUIR: nome do projeto */
+        projectUrl: "#",                       /* SUBSTITUIR: URL do projeto */
+        coverImg: "",                          /* SUBSTITUIR: ex: "foto.png" */
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
         challenge: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
         learnings: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-        techs: ["Lorem", "Ipsum", "Dolor"],   /* SUBSTITUIR: tecnologias usadas */
+        techs: ["Lorem", "Ipsum", "Dolor"],    /* SUBSTITUIR */
         student: {
-          name: "Lorem Ipsum",                /* SUBSTITUIR: nome do aluno */
-          age: null,                          /* SUBSTITUIR: idade (número) ou null */
-          city: "Várzea Paulista, SP",        /* SUBSTITUIR: cidade */
-          photo: "https://images.unsplash.com/photo-1463453091185-61582044d556?w=200&q=80", /* SUBSTITUIR: foto */
-          bio: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-          quote: "\"Lorem ipsum dolor sit amet, consectetur adipiscing elit.\""
+          name: "Lorem Ipsum",                 /* SUBSTITUIR */
+          age: null,                           /* SUBSTITUIR: número ou null */
+          city: "Várzea Paulista, SP",         /* SUBSTITUIR */
+          photo: "https://images.unsplash.com/photo-1463453091185-61582044d556?w=200&q=80", /* SUBSTITUIR */
+          favorito: "Lorem ipsum dolor sit amet consectetur.", /* SUBSTITUIR */
+          detesta: "Lorem ipsum dolor sit amet consectetur."  /* SUBSTITUIR */
         }
       },
 
-      /* ── PROJETO 7 — EM BRANCO (a preencher) ────────────────────
-         Substitua todos os campos abaixo com as informações reais.
+      /* ── PROJETO 7 — EM BRANCO (a preencher) ──
+         Substitua todos os campos marcados com SUBSTITUIR.
          Mantenha a estrutura do objeto intacta.
-      ──────────────────────────────────────────────────────────── */
+      ── */
       {
         id: 7,
-        category: "web",                      /* SUBSTITUIR: "game" ou "web" */
-        title: "Lorem Ipsum Dolor Sit",       /* SUBSTITUIR: nome do projeto */
-        projectUrl: "#",                      /* SUBSTITUIR: URL do projeto */
-        coverImg: "",                         /* SUBSTITUIR: caminho da imagem */
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        category: "web",                       /* SUBSTITUIR: "game" ou "web" */
+        title: "Lorem Ipsum Dolor Sit",        /* SUBSTITUIR: nome do projeto */
+        projectUrl: "#",                       /* SUBSTITUIR: URL do projeto */
+        coverImg: "",                          /* SUBSTITUIR: ex: "foto.png" */
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
         challenge: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
         learnings: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-        techs: ["Lorem", "Ipsum", "Dolor"],   /* SUBSTITUIR: tecnologias usadas */
+        techs: ["Lorem", "Ipsum", "Dolor"],    /* SUBSTITUIR */
         student: {
-          name: "Lorem Ipsum",                /* SUBSTITUIR: nome do aluno */
-          age: null,                          /* SUBSTITUIR: idade (número) ou null */
-          city: "Várzea Paulista, SP",        /* SUBSTITUIR: cidade */
-          photo: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=200&q=80", /* SUBSTITUIR: foto */
-          bio: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-          quote: "\"Lorem ipsum dolor sit amet, consectetur adipiscing elit.\""
+          name: "Lorem Ipsum",                 /* SUBSTITUIR */
+          age: null,                           /* SUBSTITUIR: número ou null */
+          city: "Várzea Paulista, SP",         /* SUBSTITUIR */
+          photo: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=200&q=80", /* SUBSTITUIR */
+          favorito: "Lorem ipsum dolor sit amet consectetur.", /* SUBSTITUIR */
+          detesta: "Lorem ipsum dolor sit amet consectetur."  /* SUBSTITUIR */
         }
-      }
+      },
 
-      /* ── PROJETO 8 — EM BRANCO (a preencher) ────────────────────
-         Substitua todos os campos abaixo com as informações reais.
+      /* ── PROJETO 8 — EM BRANCO (a preencher) ──
+         Substitua todos os campos marcados com SUBSTITUIR.
          Mantenha a estrutura do objeto intacta.
-      ──────────────────────────────────────────────────────────── */
-      ,{
+      ── */
+      {
         id: 8,
-        category: "game",                     /* SUBSTITUIR: "game" ou "web" */
-        title: "Lorem Ipsum Dolor Sit",       /* SUBSTITUIR: nome do projeto */
-        projectUrl: "#",                      /* SUBSTITUIR: URL do projeto */
-        coverImg: "",                         /* SUBSTITUIR: caminho da imagem */
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        category: "game",                      /* SUBSTITUIR: "game" ou "web" */
+        title: "Lorem Ipsum Dolor Sit",        /* SUBSTITUIR: nome do projeto */
+        projectUrl: "#",                       /* SUBSTITUIR: URL do projeto */
+        coverImg: "",                          /* SUBSTITUIR: ex: "foto.png" */
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
         challenge: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
         learnings: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-        techs: ["Lorem", "Ipsum", "Dolor"],   /* SUBSTITUIR: tecnologias usadas */
+        techs: ["Lorem", "Ipsum", "Dolor"],    /* SUBSTITUIR */
         student: {
-          name: "Lorem Ipsum",                /* SUBSTITUIR: nome do aluno */
-          age: null,                          /* SUBSTITUIR: idade (número) ou null */
-          city: "Várzea Paulista, SP",        /* SUBSTITUIR: cidade */
-          photo: "https://images.unsplash.com/photo-1463453091185-61582044d556?w=200&q=80", /* SUBSTITUIR: foto */
-          bio: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-          quote: "\"Lorem ipsum dolor sit amet, consectetur adipiscing elit.\""
+          name: "Lorem Ipsum",                 /* SUBSTITUIR */
+          age: null,                           /* SUBSTITUIR: número ou null */
+          city: "Várzea Paulista, SP",         /* SUBSTITUIR */
+          photo: "https://images.unsplash.com/photo-1463453091185-61582044d556?w=200&q=80", /* SUBSTITUIR */
+          favorito: "Lorem ipsum dolor sit amet consectetur.", /* SUBSTITUIR */
+          detesta: "Lorem ipsum dolor sit amet consectetur."  /* SUBSTITUIR */
         }
       }
 
@@ -1095,8 +685,7 @@
 
     /* ============================================================
       FUNÇÃO: openDetail(id)
-      Abre a página de detalhe de um projeto ao clicar no card.
-      Recebe o índice do projeto no array `projects`.
+      Abre a página de detalhe ao clicar num card.
     ============================================================ */
     function openDetail(id) {
       const p = projects[id];
@@ -1121,7 +710,6 @@
           </button>
         </nav>
 
-        <!-- Capa do projeto -->
         <div class="relative" style="height:420px;overflow:hidden;">
           ${coverImgHTML}
           <div style="position:absolute;inset:0;background:linear-gradient(to top,var(--color-bg) 0%,transparent 60%);"></div>
@@ -1131,7 +719,6 @@
           </div>
         </div>
 
-        <!-- Conteúdo principal -->
         <div style="max-width:900px;margin:0 auto;padding:3rem 1.5rem 5rem;">
 
           <section style="margin-bottom:3rem;">
@@ -1141,14 +728,8 @@
 
           ${p.projectUrl && p.projectUrl !== '#' ? `
           <div style="margin-bottom:3rem;">
-            <a href="${p.projectUrl}" target="_blank" style="
-              display:inline-flex;align-items:center;gap:.5rem;
-              padding:.75rem 1.75rem;border-radius:8px;
-              background:var(--color-accent);color:#fff;
-              font-weight:700;font-size:.9rem;letter-spacing:.04em;
-              text-decoration:none;transition:all .2s;
-              box-shadow:0 0 24px rgba(211,110,42,0.25);
-            " onmouseover="this.style.background='var(--color-accent-dark)';this.style.transform='translateY(-2px)'"
+            <a href="${p.projectUrl}" target="_blank" style="display:inline-flex;align-items:center;gap:.5rem;padding:.75rem 1.75rem;border-radius:8px;background:var(--color-accent);color:#fff;font-weight:700;font-size:.9rem;letter-spacing:.04em;text-decoration:none;transition:all .2s;box-shadow:0 0 24px rgba(211,110,42,0.25);"
+               onmouseover="this.style.background='var(--color-accent-dark)';this.style.transform='translateY(-2px)'"
                onmouseout="this.style.background='var(--color-accent)';this.style.transform=''">
               🚀 Ver Projeto Online
               <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8H13M13 8L8.5 3.5M13 8L8.5 12.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
@@ -1179,11 +760,26 @@
               <img src="${p.student.photo}" alt="${p.student.name}" class="detail-student-photo" />
               <div style="flex:1;min-width:220px;">
                 <h3 style="font-family:'Syne',sans-serif;font-size:1.5rem;font-weight:800;margin-bottom:.2rem;">${p.student.name}</h3>
-                <p style="color:var(--color-accent);font-size:.82rem;font-weight:600;letter-spacing:.05em;margin-bottom:1rem;">${p.student.city}${ageLabel}</p>
-                <p style="color:var(--color-text-muted);line-height:1.75;font-size:.93rem;">${p.student.bio}</p>
-                <blockquote style="margin-top:1.25rem;padding:1rem 1.25rem;background:rgba(0,210,255,.05);border-left:3px solid var(--color-accent);border-radius:0 8px 8px 0;color:var(--color-text);font-style:italic;font-size:.93rem;line-height:1.7;">
-                  ${p.student.quote}
-                </blockquote>
+                <p style="color:var(--color-accent);font-size:.82rem;font-weight:600;letter-spacing:.05em;margin-bottom:1.5rem;">${p.student.city}${ageLabel}</p>
+
+                <!-- ❤️ Coisa favorita -->
+                <div style="display:flex;gap:.75rem;align-items:flex-start;margin-bottom:1rem;padding:.9rem 1.1rem;background:rgba(211,110,42,0.06);border-radius:10px;border:1px solid rgba(211,110,42,0.15);">
+                  <span style="font-size:1.2rem;line-height:1.4;flex-shrink:0;">❤️</span>
+                  <div>
+                    <div style="font-size:.68rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--color-accent);margin-bottom:.25rem;">Coisa favorita</div>
+                    <div style="color:var(--color-text-muted);font-size:.93rem;line-height:1.6;">${p.student.favorito}</div>
+                  </div>
+                </div>
+
+                <!-- 🙅 Coisa que detesta -->
+                <div style="display:flex;gap:.75rem;align-items:flex-start;padding:.9rem 1.1rem;background:rgba(66,115,148,0.06);border-radius:10px;border:1px solid rgba(66,115,148,0.15);">
+                  <span style="font-size:1.2rem;line-height:1.4;flex-shrink:0;">🙅</span>
+                  <div>
+                    <div style="font-size:.68rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--color-accent-2);margin-bottom:.25rem;">Coisa que detesta</div>
+                    <div style="color:var(--color-text-muted);font-size:.93rem;line-height:1.6;">${p.student.detesta}</div>
+                  </div>
+                </div>
+
               </div>
             </div>
           </div>
@@ -1208,7 +804,6 @@
 
     /* ============================================================
       FUNÇÃO: closeDetail()
-      Fecha a página de detalhe e retorna ao portfólio.
     ============================================================ */
     function closeDetail() {
       document.getElementById('detail-page').classList.remove('open');
@@ -1217,7 +812,6 @@
 
     /* ============================================================
       FILTROS DE CATEGORIA
-      Filtra os cards por "all", "game" ou "web"
     ============================================================ */
     document.querySelectorAll('.filter-btn').forEach(btn => {
       btn.addEventListener('click', () => {
@@ -1236,14 +830,10 @@
 
     /* ============================================================
       INTERSECTION OBSERVER — scroll reveal
-      Anima os elementos com classe "reveal" ao entrarem na tela
     ============================================================ */
     const observer = new IntersectionObserver(entries => {
       entries.forEach(e => {
-        if (e.isIntersecting) {
-          e.target.classList.add('visible');
-          observer.unobserve(e.target);
-        }
+        if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); }
       });
     }, { threshold: 0.1 });
 
@@ -1252,12 +842,8 @@
       observer.observe(el);
     });
 
-    /* ============================================================
-      ATALHO DE TECLADO: ESC fecha a página de detalhe
-    ============================================================ */
-    document.addEventListener('keydown', e => {
-      if (e.key === 'Escape') closeDetail();
-    });
+    /* ESC fecha o detalhe */
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') closeDetail(); });
   </script>
 
 </body>
