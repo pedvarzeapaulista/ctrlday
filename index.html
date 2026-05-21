@@ -1413,31 +1413,35 @@
     });
 
     /* ── INTERSECTION OBSERVER ── */
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(e => {
-        if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); }
+    // DEPOIS (com fallback):
+    function revealAll() {
+      document.querySelectorAll('.reveal, .staircase-step, .mobile-step')
+        .forEach(el => el.classList.add('visible'));
+    }
+
+    try {
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(e => {
+          if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); }
+        });
+      }, { threshold: 0.10 });
+
+      document.querySelectorAll('.reveal').forEach((el, i) => {
+        el.style.transitionDelay = (i * 0.05) + 's';
+        observer.observe(el);
       });
-    }, {threshold: 0.10});
-
-    document.querySelectorAll('.reveal').forEach((el, i) => {
-      el.style.transitionDelay = (i * 0.05) + 's';
-      observer.observe(el);
-    });
-
-    /* Degraus da escada com delay escalonado */
-    document.querySelectorAll('.staircase-step').forEach((el, i) => {
-      el.style.transitionDelay = (i * 0.18) + 's';
-      observer.observe(el);
-    });
-
-    /* Versão mobile */
-    document.querySelectorAll('.mobile-step').forEach((el, i) => {
-      el.style.transitionDelay = (i * 0.12) + 's';
-      observer.observe(el);
-    });
-
-    /* ESC fecha detalhe */
-    document.addEventListener('keydown', e => { if (e.key === 'Escape') closeDetail(); });
+      document.querySelectorAll('.staircase-step').forEach((el, i) => {
+        el.style.transitionDelay = (i * 0.18) + 's';
+        observer.observe(el);
+      });
+      document.querySelectorAll('.mobile-step').forEach((el, i) => {
+        el.style.transitionDelay = (i * 0.12) + 's';
+        observer.observe(el);
+      });
+    } catch(e) {
+      revealAll(); // garante que tudo aparece mesmo sem observer
+    }    /* ESC fecha detalhe */
+        document.addEventListener('keydown', e => { if (e.key === 'Escape') closeDetail(); });
   </script>
 
 </body>
