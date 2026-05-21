@@ -313,143 +313,6 @@
     .live-dot{width:8px;height:8px;border-radius:50%;background:#22c55e;animation:pulse 1.5s infinite;display:inline-block}
 
     @media(max-width:640px){.nav-links{display:none}.countdown{gap:1rem}.countdown-num{font-size:1.8rem}}
-
-    /* ══════════════════════════════════════════════════════════════
-       SISTEMA DE LIBERAÇÃO PROGRESSIVA
-    ══════════════════════════════════════════════════════════════ */
-
-    /* Seções bloqueadas — visíveis mas com overlay de blur */
-    .locked-section {
-      position: relative;
-    }
-    /* Conteúdo interno fica embaçado enquanto bloqueado */
-    .locked-section:not(.unlocked) > *:not(.lock-overlay) {
-      filter: blur(6px);
-      pointer-events: none;
-      user-select: none;
-    }
-    /* Overlay que cobre a seção bloqueada */
-    .lock-overlay {
-      display: flex;
-      position: absolute;
-      inset: 0;
-      z-index: 10;
-      background: rgba(255, 255, 255, 0.55);
-      backdrop-filter: blur(2px);
-      align-items: center;
-      justify-content: center;
-      padding: 2rem;
-    }
-    .locked-section.unlocked .lock-overlay {
-      display: none;
-    }
-    .lock-overlay-card {
-      background: #fff;
-      border: 1px solid rgba(211,110,42,0.20);
-      border-radius: 20px;
-      padding: 2.25rem 2.75rem;
-      text-align: center;
-      box-shadow: 0 16px 56px rgba(0,0,0,0.10);
-      max-width: 420px;
-      width: 100%;
-    }
-    .lock-overlay-icon {
-      font-size: 2.5rem;
-      margin-bottom: 0.75rem;
-      display: block;
-    }
-    .lock-overlay-title {
-      font-family: 'Syne', sans-serif;
-      font-size: 1.2rem;
-      font-weight: 800;
-      color: var(--color-text-dark);
-      margin-bottom: 0.4rem;
-    }
-    .lock-overlay-subtitle {
-      font-size: 0.82rem;
-      color: var(--color-text-muted);
-      line-height: 1.6;
-      margin-bottom: 1.25rem;
-    }
-    .lock-overlay-timer-label {
-      font-size: 0.68rem;
-      font-weight: 700;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: var(--color-accent-2);
-      margin-bottom: 0.3rem;
-    }
-    .lock-overlay-timer {
-      font-family: 'Syne', sans-serif;
-      font-size: 2rem;
-      font-weight: 800;
-      color: var(--color-accent);
-      letter-spacing: 0.04em;
-    }
-
-    /* Barra "próxima liberação" no hero */
-    .unlock-strip {
-      margin-top: 2rem;
-      padding: 0.9rem 1.5rem;
-      background: rgba(255,255,255,0.7);
-      border: 1px solid rgba(211,110,42,0.20);
-      border-radius: 12px;
-      backdrop-filter: blur(8px);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 1rem;
-      flex-wrap: wrap;
-    }
-    .unlock-strip-label {
-      font-size: 0.75rem;
-      font-weight: 600;
-      letter-spacing: 0.10em;
-      text-transform: uppercase;
-      color: var(--color-text-muted);
-      white-space: nowrap;
-    }
-    .unlock-strip-name {
-      font-family: 'Syne', sans-serif;
-      font-size: 0.9rem;
-      font-weight: 800;
-      color: var(--color-accent-2);
-      white-space: nowrap;
-    }
-    .unlock-strip-timer {
-      font-family: 'Syne', sans-serif;
-      font-size: 1.1rem;
-      font-weight: 800;
-      color: var(--color-accent);
-      letter-spacing: 0.04em;
-      white-space: nowrap;
-    }
-    .unlock-strip-sep {
-      width: 4px;
-      height: 4px;
-      border-radius: 50%;
-      background: var(--color-border);
-      flex-shrink: 0;
-    }
-
-    /* Mensagem de "tudo liberado" */
-    .unlock-all-msg {
-      display: none;
-      font-size: 0.82rem;
-      color: #16a34a;
-      font-weight: 600;
-      align-items: center;
-      gap: 0.4rem;
-    }
-
-    /* Entrada suave ao desbloquear */
-    @keyframes sectionReveal {
-      from { opacity: 0; transform: translateY(32px); }
-      to   { opacity: 1; transform: translateY(0); }
-    }
-    .section-unlocked-anim {
-      animation: sectionReveal 0.8s cubic-bezier(.22,.68,0,1.2) both;
-    }
   </style>
 </head>
 
@@ -463,7 +326,7 @@
       <a href="#timeline">História</a>
       <a href="#robotica">Robótica</a>
       <a href="#projetos">Projetos</a>
-      <a href="#footer">Sobre</a>
+      <a href="#sobre">Sobre</a>
     </div>
   </nav>
 
@@ -494,36 +357,21 @@
           </a>
           <a href="#projetos" class="hero-cta-2">Ver projetos</a>
         </div>
-
-        <!-- Countdown do evento -->
         <div class="countdown justify-center animate-fade-up delay-4" id="countdown-display">
           <div class="countdown-block"><div class="countdown-num" id="cd-h">--</div><div class="countdown-label">horas</div></div>
           <div class="countdown-block"><div class="countdown-num" id="cd-m">--</div><div class="countdown-label">minutos</div></div>
           <div class="countdown-block"><div class="countdown-num" id="cd-s">--</div><div class="countdown-label">segundos</div></div>
         </div>
-
-        <!-- Barra de próxima liberação -->
-        <div class="unlock-strip animate-fade-up delay-4" id="unlock-strip">
-          <span class="unlock-strip-label">Próxima liberação</span>
-          <div class="unlock-strip-sep"></div>
-          <span class="unlock-strip-name" id="unlock-next-name">—</span>
-          <div class="unlock-strip-sep"></div>
-          <span class="unlock-strip-timer" id="unlock-next-timer">--:--:--</span>
-        </div>
-        <div class="unlock-all-msg animate-fade-up delay-4" id="unlock-all-msg">
-          <span style="font-size:1rem;">🎉</span> Tudo desbloqueado — bem-vindo ao CTRL Day!
-        </div>
-
       </div>
     </section>
 
-    <!-- SOBRE O EVENTO (sempre visível) -->
+    <!-- SOBRE O EVENTO -->
     <section id="evento" class="py-24 px-4 max-w-7xl mx-auto">
       <div class="text-center mb-16 reveal">
         <span class="section-tag">// o que é o ctrl day</span>
         <h2 class="section-title">Um evento feito por<br/>quem aprende fazendo</h2>
         <p class="mt-4 text-sm leading-relaxed mx-auto" style="color:var(--color-text-muted);max-width:520px;">
-          O CTRL Day é a grande exposição anual da CNA Várzea Paulista, onde os alunos
+          O CTRL Day é a grande exposição anual da CNA, onde os alunos
           apresentam para a comunidade tudo que construíram ao longo do ano.
         </p>
       </div>
@@ -568,18 +416,8 @@
     </section>
 
     <!-- ══════════════════════════════════════════════════════════════
-         LIBERAÇÃO 1 — TERÇA 20/05 às 19h — LINHA DO TEMPO
+         LINHA DO TEMPO — HORIZONTAL EM DEGRAUS DE ESCADA
     ══════════════════════════════════════════════════════════════ -->
-    <div id="section-timeline" class="locked-section">
-      <div class="lock-overlay" id="overlay-timeline">
-        <div class="lock-overlay-card">
-          <span class="lock-overlay-icon">🔒</span>
-          <div class="lock-overlay-title">Exposição das Escadas</div>
-          <div class="lock-overlay-subtitle">Essa seção será revelada na terça-feira à noite — assim como a exposição física vai aparecer nas escadas da escola!</div>
-          <div class="lock-overlay-timer-label">Libera em</div>
-          <div class="lock-overlay-timer" id="overlay-timer-timeline">--:--:--</div>
-        </div>
-      </div>
     <section id="timeline" class="timeline-section">
 
       <div class="text-center mb-10 reveal">
@@ -728,21 +566,10 @@
         </div>
       </div>
     </section>
-    </div><!-- /section-timeline -->
 
     <!-- ══════════════════════════════════════════════════════════════
-         LIBERAÇÃO 2 — QUINTA 22/05 às 19h — ROBÓTICA
+         ROBÓTICA — Makey Makey (card largo) + Microbit + Arduino
     ══════════════════════════════════════════════════════════════ -->
-    <div id="section-robotica" class="locked-section">
-      <div class="lock-overlay" id="overlay-robotica">
-        <div class="lock-overlay-card">
-          <span class="lock-overlay-icon">🤖</span>
-          <div class="lock-overlay-title">Atração de Robótica</div>
-          <div class="lock-overlay-subtitle">As atrações interativas serão reveladas na quinta-feira — prepare-se para tocar, experimentar e programar!</div>
-          <div class="lock-overlay-timer-label">Libera em</div>
-          <div class="lock-overlay-timer" id="overlay-timer-robotica">--:--:--</div>
-        </div>
-      </div>
     <section id="robotica" class="robo-section">
       <div class="max-w-7xl mx-auto">
         <div class="text-center mb-16 reveal">
@@ -755,7 +582,7 @@
         </div>
 
         <!-- ── CARD LARGO: Makey Makey ── -->
-        <div class="robo-card reveal mb-8" style="display:grid;grid-template-columns:1fr 1fr;min-height:320px; max-height:500px">
+        <div class="robo-card reveal mb-8" style="display:grid;grid-template-columns:1fr 1fr;min-height:320px; max-height:600px">
           <div style="position:relative;overflow:hidden;min-height:280px;">
             <img style="width:100%;height:100%;object-fit:cover;display:block;"
               src="MakeyMakey2_0.jpg"
@@ -847,21 +674,6 @@
 
       </div>
     </section>
-    </div><!-- /section-robotica -->
-
-    <!-- ══════════════════════════════════════════════════════════════
-         LIBERAÇÃO 3 — SÁBADO 24/05 às 9h — PROJETOS + PARCEIROS + FOOTER
-    ══════════════════════════════════════════════════════════════ -->
-    <div id="section-final" class="locked-section">
-      <div class="lock-overlay" id="overlay-final">
-        <div class="lock-overlay-card">
-          <span class="lock-overlay-icon">🎮</span>
-          <div class="lock-overlay-title">Projetos dos Alunos</div>
-          <div class="lock-overlay-subtitle">Os projetos serão revelados no sábado de manhã, com o início do CTRL Day. Falta pouco!</div>
-          <div class="lock-overlay-timer-label">Libera em</div>
-          <div class="lock-overlay-timer" id="overlay-timer-final">--:--:--</div>
-        </div>
-      </div>
 
     <!-- PORTFÓLIO DE PROJETOS -->
     <section id="projetos" class="py-24 px-4 max-w-7xl mx-auto">
@@ -1028,8 +840,6 @@
       </div>
     </footer>
 
-    </div><!-- /section-final -->
-
   </main>
 
   <!-- DETAIL PAGE -->
@@ -1139,100 +949,23 @@
       /* 8 — KODU — com vídeo de gameplay e download */
       {
         id: 8, category: "game",
-        title: "Lorem Ipsum Dolor Sit",            /* SUBSTITUIR: título do jogo */
+        title: "NBA2Kodu26",            /* SUBSTITUIR: título do jogo */
         projectUrl: null,                           /* Kodu não suporta hosting externo */
-        coverImg: "",                               /* SUBSTITUIR: ex "kodu_thumb.png" */
+        coverImg: "nba2kodu26.jpg",                               /* SUBSTITUIR: ex "kodu_thumb.png" */
         isKodu: true,
-        koduVideoUrl: "",                           /* SUBSTITUIR: URL do vídeo (YouTube embed ou arquivo local) */
+        koduVideoUrl: "nba2kodu26.mp4",                           /* SUBSTITUIR: URL do vídeo (YouTube embed ou arquivo local) */
         koduDownloadUrl: "#",                       /* SUBSTITUIR: link para o arquivo .kodu */
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",  /* SUBSTITUIR */
-        challenge: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",      /* SUBSTITUIR */
-        learnings: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",      /* SUBSTITUIR */
+        description: "Neste desafio de basquete você controla nosso grande Kodu conforme ele junto de seu time tenta derrotar seus adversários.",  /* SUBSTITUIR */
+        challenge: "Ajustar a dificuldade e inimigos para que haja uma narrativa interna de quem seria o seu maior rival, assim como abstração das funções do basquete para uma ferramenta simples como o Kodu.",      /* SUBSTITUIR */
+        learnings: "Uso de condicionais, story telling visual, design de jogos e funções de pontuação.",      /* SUBSTITUIR */
         techs: ["Kodu Game Lab", "Lógica Visual", "Design de Níveis"],              /* SUBSTITUIR se necessário */
         student: { name: "Lorem Ipsum", age: null, city: "Várzea Paulista, SP", photo: "https://images.unsplash.com/photo-1463453091185-61582044d556?w=200&q=80", favorito: "Lorem ipsum.", detesta: "Lorem ipsum." } /* SUBSTITUIR */
       }
 
     ];
 
-    /* ══════════════════════════════════════════════════════════════
-       SISTEMA DE LIBERAÇÃO PROGRESSIVA
-       Datas (horário de Brasília = UTC-3):
-         Fase 1 — Escadas:   Terça  20/05/2026 19:00
-         Fase 2 — Robótica:  Quinta 22/05/2026 19:00
-         Fase 3 — Final:     Sábado 24/05/2026 09:00
-    ══════════════════════════════════════════════════════════════ */
-    const UNLOCK_PHASES = [
-      { id: 'section-timeline', date: new Date('2026-05-20T19:00:00-03:00'), label: 'EXPOSIÇÃO DAS ESCADAS' },
-      { id: 'section-robotica', date: new Date('2026-05-22T19:00:00-03:00'), label: 'ATRAÇÃO DE ROBÓTICA'  },
-      { id: 'section-final',    date: new Date('2026-05-24T09:00:00-03:00'), label: 'PROJETOS DOS ALUNOS'  }
-    ];
-
-    function applyUnlocks() {
-      const now = new Date();
-      UNLOCK_PHASES.forEach(phase => {
-        if (now >= phase.date) {
-          const el = document.getElementById(phase.id);
-          if (el && !el.classList.contains('unlocked')) {
-            el.classList.add('unlocked', 'section-unlocked-anim');
-            // Re-trigger intersection observer for newly visible elements
-            el.querySelectorAll('.reveal, .staircase-step, .mobile-step').forEach((revEl, i) => {
-              revEl.style.transitionDelay = (i * 0.05) + 's';
-              observer.observe(revEl);
-            });
-          }
-        }
-      });
-    }
-
-    function updateUnlockStrip() {
-      const now = new Date();
-      // Find next phase not yet unlocked
-      const next = UNLOCK_PHASES.find(p => now < p.date);
-
-      const strip = document.getElementById('unlock-strip');
-      const allMsg = document.getElementById('unlock-all-msg');
-
-      if (!next) {
-        // Everything unlocked
-        strip.style.display = 'none';
-        allMsg.style.display = 'inline-flex';
-      } else {
-        strip.style.display = 'flex';
-        allMsg.style.display = 'none';
-
-        const diff = next.date - now;
-        const h = Math.floor(diff / 3600000);
-        const m = Math.floor((diff % 3600000) / 60000);
-        const s = Math.floor((diff % 60000) / 1000);
-
-        document.getElementById('unlock-next-name').textContent = next.label;
-        document.getElementById('unlock-next-timer').textContent =
-          String(h).padStart(2,'0') + ':' + String(m).padStart(2,'0') + ':' + String(s).padStart(2,'0');
-      }
-
-      // Update individual overlay timers
-      const overlayMap = {
-        'section-timeline': 'overlay-timer-timeline',
-        'section-robotica': 'overlay-timer-robotica',
-        'section-final':    'overlay-timer-final'
-      };
-      UNLOCK_PHASES.forEach(phase => {
-        const timerEl = document.getElementById(overlayMap[phase.id]);
-        if (!timerEl) return;
-        const diff = phase.date - now;
-        if (diff <= 0) {
-          timerEl.textContent = '00:00:00';
-        } else {
-          const h = Math.floor(diff / 3600000);
-          const m = Math.floor((diff % 3600000) / 60000);
-          const s = Math.floor((diff % 60000) / 1000);
-          timerEl.textContent = String(h).padStart(2,'0') + ':' + String(m).padStart(2,'0') + ':' + String(s).padStart(2,'0');
-        }
-      });
-    }
-
-    /* ── COUNTDOWN DO EVENTO ── */
-    const EVENT_DATE = new Date('2026-05-24T09:00:00-03:00');
+    /* ── COUNTDOWN ── */
+    const EVENT_DATE = new Date('2026-05-23T09:00:00');
     function updateCountdown() {
       const diff = EVENT_DATE - new Date();
       if (diff <= 0) { ['cd-h','cd-m','cd-s'].forEach(id=>document.getElementById(id).textContent='00'); return; }
@@ -1241,11 +974,6 @@
       document.getElementById('cd-s').textContent = String(Math.floor((diff%60000)/1000)).padStart(2,'0');
     }
     updateCountdown(); setInterval(updateCountdown, 1000);
-
-    /* Executa unlock + strip a cada segundo */
-    applyUnlocks();
-    updateUnlockStrip();
-    setInterval(() => { applyUnlocks(); updateUnlockStrip(); }, 1000);
 
     /* ── openDetail ── */
     function openDetail(id) {
@@ -1413,35 +1141,31 @@
     });
 
     /* ── INTERSECTION OBSERVER ── */
-    // DEPOIS (com fallback):
-    function revealAll() {
-      document.querySelectorAll('.reveal, .staircase-step, .mobile-step')
-        .forEach(el => el.classList.add('visible'));
-    }
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); }
+      });
+    }, {threshold: 0.10});
 
-    try {
-      const observer = new IntersectionObserver(entries => {
-        entries.forEach(e => {
-          if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); }
-        });
-      }, { threshold: 0.10 });
+    document.querySelectorAll('.reveal').forEach((el, i) => {
+      el.style.transitionDelay = (i * 0.05) + 's';
+      observer.observe(el);
+    });
 
-      document.querySelectorAll('.reveal').forEach((el, i) => {
-        el.style.transitionDelay = (i * 0.05) + 's';
-        observer.observe(el);
-      });
-      document.querySelectorAll('.staircase-step').forEach((el, i) => {
-        el.style.transitionDelay = (i * 0.18) + 's';
-        observer.observe(el);
-      });
-      document.querySelectorAll('.mobile-step').forEach((el, i) => {
-        el.style.transitionDelay = (i * 0.12) + 's';
-        observer.observe(el);
-      });
-    } catch(e) {
-      revealAll(); // garante que tudo aparece mesmo sem observer
-    }    /* ESC fecha detalhe */
-        document.addEventListener('keydown', e => { if (e.key === 'Escape') closeDetail(); });
+    /* Degraus da escada com delay escalonado */
+    document.querySelectorAll('.staircase-step').forEach((el, i) => {
+      el.style.transitionDelay = (i * 0.18) + 's';
+      observer.observe(el);
+    });
+
+    /* Versão mobile */
+    document.querySelectorAll('.mobile-step').forEach((el, i) => {
+      el.style.transitionDelay = (i * 0.12) + 's';
+      observer.observe(el);
+    });
+
+    /* ESC fecha detalhe */
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') closeDetail(); });
   </script>
 
 </body>
